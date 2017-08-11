@@ -6,8 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/member.css">
-<link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/footer.css">
+<link rel="stylesheet" href="${css}%>/resources/css/member.css">
+<link rel="stylesheet" href="${css}/resources/css/footer.css">
 
 <title>학생관리</title>
 </head>

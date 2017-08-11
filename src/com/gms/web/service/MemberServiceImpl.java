@@ -1,12 +1,15 @@
 package com.gms.web.service;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.gms.web.constant.Database;
 import com.gms.web.dao.MemberDao;
 import com.gms.web.dao.MemberDaoImpl;
 import com.gms.web.domain.MemberBean;
+
 
 
 
@@ -50,11 +53,16 @@ public class MemberServiceImpl implements MemberService{
 		return (MemberDaoImpl.getInstance().delete(id).equals("0"))?"회원탈퇴실패":"회원탈퇴성공";
 	}
 	@Override
-	public String login(MemberBean member) {
+	public Map<String, Object> login(MemberBean member) {
+		Map<String,Object> map = new HashMap<>();
 		MemberBean m1=memberById(member.getId());
-		return (m1!=null)?
+		String page=
+		(m1!=null)?
 				(member.getPw().equals(m1.getPw()))?
 						"main":"login_fail":"join";
+		map.put("page",page);
+		map.put("user",m1);
+		return map;
 	}
 	
 }

@@ -14,7 +14,6 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/1027/JSPProject/jars/jstl.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/1027/JSPProject/jars/ojdbc6.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/1027/JSPProject/jars/servlet-api.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/1027/JSPProject/jars/standard.jar"/>

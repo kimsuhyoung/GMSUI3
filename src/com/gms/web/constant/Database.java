@@ -16,7 +16,7 @@ public class Database {
 	public static final String TABLE_MEMBER="member";
 	public static final String TABLE_ARTICLE="Board";
 	
-	public static final String MEMBER_ID="id";
+	public static final String MEMBER_ID="member_id";
 	public static final String MEMBER_NAME="name";
 	public static final String MEMBER_PASSWORD="password";
 	public static final String MEMBER_SSN="ssn";

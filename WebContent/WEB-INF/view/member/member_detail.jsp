@@ -3,8 +3,10 @@
 <%@page import="java.sql.PreparedStatement"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/view/common/main_head.jsp" %>
-
+<jsp:include page="/WEB-INF/view/common/common_head.jsp"/>
+<div class="jumbotron text-center">
+	<h1>상세정보</h1>
+</div>
 
 	<div id="container">
 	<table id="member_detail_tab">
@@ -54,15 +56,15 @@
 </div>
 	<script type="text/javascript">
 	function golist(){
-		location.href="<%=request.getContextPath() %>/member/member_list.jsp";
+		location.href="${ctx}/member_list.jsp";
 	}
 	function goupdate(){
-		location.href="<%=request.getContextPath() %>/member/member_update.jsp?id=&name=&birth=&email=&phone=&addr=&major=&subject=";
+		location.href="${ctx}/member_update.jsp?id=&name=&birth=&email=&phone=&addr=&major=&subject=";
 	}
 	
 	</script>
 	
 	<div id="footer">
-		<%@ include file="/WEB-INF/view/common/footer.jsp" %>
+		<jsp:include page="/WEB-INF/view/common/footer.jsp"/>
 		</div>
 	

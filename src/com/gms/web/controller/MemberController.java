@@ -8,17 +8,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.gms.web.constant.Action;
 import com.gms.web.util.DispatcherServlet;
 import com.gms.web.util.Separator;
 
 @WebServlet("/member.do")
 public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("member controller get 진입");
-		DispatcherServlet.send(request, response);
-		switch (request.getParameter("action")) {
-		case "move":
+		Separator.init(request);
+		switch (request.getParameter(Action.CMD)) {
+		case Action.MOVE:
 			DispatcherServlet.send(request, response);
 			break;
 		
@@ -26,9 +27,5 @@ public class MemberController extends HttpServlet {
 		default:
 			break;
 		}
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("member controller post 진입");
 	}
 }

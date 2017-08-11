@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%@ include file="/WEB-INF/view/common/main_head.jsp" %>
+<jsp:include page="/WEB-INF/view/common/main_head.jsp"/>
 
 	
 		<!-- 로그인화면  -->
 		<div id="container-login">
 			<a href="../index.jsp" id="google"><img src="../img/google.jpg" /></a><br>
 			<div id="contatiner-form">
-				<form action="" >
+				<form action="">
 					<fieldset>
 						<legend>Login</legend>
 						<span id="span-form">ID</span> 
@@ -23,5 +23,5 @@
 			</div>
 		</div>
 	<div id="footer">
-		<%@ include file="/WEB-INF/view/common/footer.jsp" %>
+		<jsp:include page="/WEB-INF/view/common/footer.jsp"/>
 		</div>

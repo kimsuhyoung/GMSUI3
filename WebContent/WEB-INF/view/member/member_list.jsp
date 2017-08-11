@@ -6,9 +6,11 @@
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<jsp:include page="/WEB-INF/view/common/common_head.jsp"/>
+	<div class="jumbotron text-center">
 
-<%@ include file="/WEB-INF/view/common/main_head.jsp" %>
-
+	<h1>학생 목록</h1>
+</div>
 
 		<div id="container">
 		<!-- id,pw,ssn,name,regdate,email,major,subject,phone -->
@@ -27,16 +29,16 @@
 
 			<tr>
 				<td></td>	
-				<td><a href="<%=request.getContextPath()%>/member/member_detail.jsp?id="></a></td>
+				<td><a href="${ctx }/member_detail.jsp?id="></a></td>
 				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>
-				<td><a href="<%=request.getContextPath() %>/member/member_update.jsp?id=">수정</a>
+				<td><a href="${ctx }/member_update.jsp?id=">수정</a>
 					
-					<a href="<%=request.getContextPath() %>/member/service_delete.jsp?id=">삭제</a>
+					<a href="${ctx }/service_delete.jsp?id=">삭제</a>
 				</td>
 				
 			</tr>
@@ -44,5 +46,5 @@
 		</table>
 	</div>
 	<div id="footer">
-	<%@ include file="/WEB-INF/view/common/footer.jsp" %>
+	<jsp:include page="/WEB-INF/view/common/footer.jsp"/>
 		</div>

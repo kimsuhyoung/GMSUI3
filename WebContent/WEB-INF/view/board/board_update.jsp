@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="board_head.jsp" %>
+<jsp:include page="/WEB-INF/view/common/common_head.jsp"/>
+<div class="jumbotron text-center">
+	<h1>게시글 수정</h1>
+</div>
+
 	<div id="container">
 	</div>
 	<div><jsp:include page="../common/footer.jsp"/>

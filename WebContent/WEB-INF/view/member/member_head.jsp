@@ -6,8 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="<%=request.getContextPath() %>/css/member.css">
-<link rel="stylesheet" href="<%=request.getContextPath() %>/css/footer.css">
+<link rel="stylesheet" href="${css }/member.css">
+<link rel="stylesheet" href="${css }/footer.css">
 <title>학생관리</title>
 </head>
 <body>
@@ -18,5 +18,5 @@
 	<div id=clock><%=now %></div>
 	</header>
 	<div id="href_div">
-	<a href="<%=request.getContextPath() %>/login.jsp">LOGOUT</a><a href="<%=request.getContextPath() %>/member/member.jsp">MAIN</a>	
-	</div>S
+	<a href="${ctx }/login.jsp">LOGOUT</a><a href="${ctx }/member.jsp">MAIN</a>	
+	</div>

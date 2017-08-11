@@ -1,25 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/member.css">
-<link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/footer.css">
+<link rel="stylesheet" href="${css}/member.css">
+<link rel="stylesheet" href="${css}/footer.css">
 <title>학생관리</title>
 </head>
 <body>
 <div  id="wrapper">
 <header>
-	<h3 id="title">로그인</h3>
+	<h3 id="title">비밀번호가 틀렸습니다.</h3>
 
 	</header></div>
 		<!-- 로그인화면  -->
 		
 		<div id="container-login">
 			<div id="contatiner-form">
-				<form action="<%=request.getContextPath() %>/common.do"  id="login_box" method="get">
+				<form action="${ctx}/common.do"  id="login_box" method="get">
 					<fieldset>
 						<legend>Login</legend>
 						<span id="span-form">ID</span> 
@@ -40,8 +39,8 @@
 <div id="footer">
 <footer>
 	 
-  <a href="<%=request.getContextPath()%>/util/jdbc_test.jsp">DB연결테스트</a>
-  <a href="<%=request.getContextPath()%>/util/update_email.jsp">이메일 업데이트</a>
+  <a href="${ctx}/util/jdbc_test.jsp">DB연결테스트</a>
+  <a href="${ctx}/util/update_email.jsp">이메일 업데이트</a>
   <p>Contact information: <a href="mailto:someone@example.com">
   someone@example.com</a>.</p>
  

@@ -4,11 +4,14 @@
 <%@page import="java.sql.PreparedStatement"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%@ include file="/WEB-INF/view/common/main_head.jsp" %>
+<jsp:include page="/WEB-INF/view/common/common_head.jsp"/>
+<div class="jumbotron text-center">
+	<h1>수정</h1>
+</div>
 
 
 	<div id="container">
-	<form action="<%=request.getContextPath() %>/member/service_update.jsp" method="get">
+	<form action="${ctx}/service_update.jsp" method="get">
 	<table id="member_detail_tab">
 		<tr >
 			<td colspan="2" rowspan="3" width="10%"><img alt="" src="../img/kkk.jpg">  </td>
@@ -56,16 +59,16 @@
 	<%-- 
 	function javascript:confirm(){
 		
-		location.href="<%=request.getContextPath() %>/member/service_update.jsp";
+		location.href="${ctx}/member/service_update.jsp";
 	} --%>
 	<script type="text/javascript">
 	function cancle(){
-		location.href="<%=request.getContextPath() %>/member/member_list.jsp";
+		location.href="${ctx}/member_list.jsp";
 	}
 	
 	</script>
 	
 	<div id="footer">
-		<%@ include file="/WEB-INF/view/common/footer.jsp" %>
+		<jsp:include page="/WEB-INF/view/common/footer.jsp"/>
 		</div>
 	

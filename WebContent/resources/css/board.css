@@ -1,13 +1,12 @@
 @CHARSET "UTF-8";
 @IMPORT "common.css";
-body #wrapper{background-image: url("../img/back.jpg");}
-html{background-image: url("../img/back.jpg");}
+
 .th5{width: 5%;}
 .th15{width: 15%;}
 .th20{width: 20%;}
 .th30{width: 30%;}
-#board-tab{margin: 0 auto;width: 100%;text-align: center; border: 1px solid white;}
+#board-tab{margin: 0 auto;width: 100%;text-align: center; border: 1px solid #060606;}
 textarea{margin: 0 auto;width: 80%;}
-table tr{height: 25px;color: white;border: 1px solid white;}
-table th{height: 25px;color: white;border: 1px solid white;}
-table td{height: 25px;color: white;border: 1px solid white;}
+table tr{height: 25px;color: #060606;border: 1px solid #060606;}
+table th{height: 25px;color: #060606;border: 1px solid #060606;}
+table td{height: 25px;color: #060606;border: 1px solid #060606;}
