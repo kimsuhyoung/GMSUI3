@@ -28,6 +28,8 @@ major_id VARCHAR2(10),
 title VARCHAR2(10),
 PRIMARY KEY(major_id)
 );
+alter table major add subj_id  varchar2(10);
+alter table major add member_id  varchar2(10);
 --drop table Major;
 
 --DML
@@ -114,7 +116,7 @@ CREATE TABLE Member(
 --DROP COLUMN subject; --컬럼 삭제
 
 --DML
-SELECT * from MEMBER;
+SELECT * from major;
 
 SELECT COUNT(*) AS COUNT FROM MEMBER;
 SELECT * FROM Member WHERE id='dsd';
@@ -245,10 +247,29 @@ SELECT COUNT(*) FROM Student s,
 
 
 
-SELECT * FROM STUD;
+SELECT * FROM test where name like '%' || '이' || '%' and rownum between 1 and 5;
+select name from student;
 
+drop table professor;
+-- 뷰 1 (스튜던트) 학생목록
+drop view test;
 
+create view test(num,member_id,name,ssn,regdate,phone,email,title)
+as
+select rownum,t.*
+from(select a.member_id,a.name,rpad(substr(a.ssn,1,8),14,'*') ssn,to_char(a.regdate,'yyyy-MM-dd') regdate, a.phone, a.email, listagg(s.title,',') within group(order by s.title) title
+from member a
+left join major m on a.member_id like m.member_id
+left join subject s on m.subj_id like s.subj_id
+group by a.member_id, a.name,a.ssn,a.regdate,a.phone,a.email
+order by regdate desc) t
+order by rownum desc;
 
+select t2.*
+from(select rownum seq,t.* 
+from test
+where name like '홍%'
+order by num desc) t ) t2
+where t2.seq between 1 and 5;
 
-
-
+select t.* from (select rownum rnum, s.* from test s where name like '이길동')t where t.rnum between 1 and 5;

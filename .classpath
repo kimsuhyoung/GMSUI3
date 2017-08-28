@@ -17,5 +17,6 @@
 	<classpathentry exported="true" kind="lib" path="C:/Users/1027/JSPProject/jars/ojdbc6.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/1027/JSPProject/jars/servlet-api.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/1027/JSPProject/jars/standard.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/1027/JSPProject/lombok.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -21,15 +21,23 @@ public class Database {
 	public static final String MEMBER_PASSWORD="password";
 	public static final String MEMBER_SSN="ssn";
 	public static final String MEMBER_REGDATE="regdate";
+	public static final String PHONE="phone";
+	public static final String PROFILE="profile";
+	public static final String EMAIL="email";
 	
 	
 	public static final String ARTICLE_SEQ="article_seq";
 	public static final String ARTICLE_ID="id";
-	public static final String ARTICLE_TITLE="title";
+	public static final String TITLE="title";
 	public static final String ARTICLE_CONTENT="content";
 	public static final String ARTICLE_REGDATE="regdate";
 	public static final String ARTICLE_HITCOUNT="hitcount";
 	
+	public static final String TABLE_MAJOR="Major";
+	public static final String MAJOR_ID="Major_id";
+	public static final String SUBJ_ID="subj_id";
 	
+	public static final String TABLE_STUDENT="test";
+	public static final String NUM="num";
 	
 }

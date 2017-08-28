@@ -22,7 +22,7 @@ import com.gms.web.util.Separator;
 
 
 
-@WebServlet("/common.do")
+@WebServlet({"/home.do","/common.do"})
 public class CommonController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -31,7 +31,7 @@ public class CommonController extends HttpServlet {
 		HttpSession sessoion = request.getSession(); //기존의 것을 불러와야 하기 때문에 new를 쓰지않고 request를 쓴다.(로그인을 한 사람의 정보여야 하기때문에)
 		System.out.println("common controller get 진입");
 		Separator.init(request);
-		switch (request.getParameter(Action.CMD)) {
+		switch (Separator.cmd.getAction()) {
 		case Action.MOVE:
 			DispatcherServlet.send(request, response);
 			break;
